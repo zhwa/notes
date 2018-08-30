@@ -21,11 +21,35 @@ For a small number of elements, lookups in a set might be faster than lookups in
 
 
 
------
+	Non-efficient code
 
 ```cpp
 #include <iostream>
 #include <set>
 #include <algorithm>
+
+int main()
+{
+	int a[] = {1, 3, 1, 4, 1, 5};
+	std::set mySet {a, a + 6};
+	std::cout << mySet.size() << std::endl;
+	return 0;
+}
 ```
 
+	More efficient code
+
+```cpp
+#include <iostream>
+#include <set>
+#include <algorithm>
+
+int main()
+{
+	int a[] = {1, 3, 1, 4, 1, 5};
+	std::sort(a, a + 6);
+	std::cout << std::unique(a, a + 6) << std::endl;
+	return 0;
+}
+
+```
