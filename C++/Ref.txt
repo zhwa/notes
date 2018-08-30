@@ -1,0 +1,3 @@
+https://www.udacity.com/course/programming-languages--cs262
+https://www.udacity.com/course/compilers-theory-and-practice--ud168
+https://www.edx.org/course/advanced-c-0
