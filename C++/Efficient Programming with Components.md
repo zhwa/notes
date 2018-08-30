@@ -21,7 +21,12 @@ For a small number of elements, lookups in a set might be faster than lookups in
 
 
 
+Code example: find the number of unique elements in an array.
+
+----
+
 	Non-efficient code
+
 
 ```cpp
 #include <iostream>
@@ -48,8 +53,13 @@ int main()
 {
 	int a[] = {1, 3, 1, 4, 1, 5};
 	std::sort(a, a + 6);
-	std::cout << std::unique(a, a + 6) << std::endl;
+	std::cout << std::unique(a, a + 6) - a << std::endl;
 	return 0;
 }
 
 ```
+
+
+-------
+
+Explanation: `std::sort` uses O(logn). `std::unique` will return a pointer to the first duplicate elements. A subtraction of another pointer will return the required number of unique elements.
