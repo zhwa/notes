@@ -23,9 +23,9 @@ For a small number of elements, lookups in a set might be faster than lookups in
 
 -----
 
-```
-	#include <iostream>
-	#include <set>
-	#include <algorithm>
+```cpp
+#include <iostream>
+#include <set>
+#include <algorithm>
 ```
 
